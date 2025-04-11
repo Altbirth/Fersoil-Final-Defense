@@ -1,17 +1,48 @@
-# WorkingFersoilApp
+# FersoilApp-ReactNative
 
-How to run this app.
-First you must have an expo go in your phone. Download it in playstore
+You need VS Code and Expo Go in Playstore
 
-Then go to terminal and split the terminal. In here you will run the backend and frontend simultaneously.
+step 1 : React Native requires Node.js for its runtime and package management. Download and install it from the Node.js website. Choose the LTS (Long Term Support) version.
 
-First go to backend [cd backend]. Install all the necessary dependencies, library or module. Such as flask, torch, etc.
+Download and paste this into CMD or powershell
+# installs fnm (Fast Node Manager)
+winget install Schniz.fnm
 
-Then in another terminal the directory must be in ..\WorkingFersoilApp>. Just like in the backend install all the necessary dependencies, library, module such expo-image-picker, axios, etc.
+# configure fnm environment
+fnm env --use-on-cd | Out-String | Invoke-Expression
 
-After installing all the necessary dependencies, library, module. Run the app.
+# download and install Node.js
+fnm use --install-if-missing 22
 
-First you must run the backend which you will type in the terminal python app.py then in your another terminal run expo start. just like the image below.
-![alt text](image.png)
+# verifies the right Node.js version is in the environment
+node -v # should print `v22.11.0`
 
-After that you will see qr code. Open you expo go in your phone and use that to scan the qr code in your terminal.
+# verifies the right npm version is in the environment
+npm -v # should print `10.9.0`
+
+Then open the terminal and type these:
+Backend {
+    pip install flask
+    pip install flask-cors
+    pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cpu
+    python -c "import torch; print(torch.__version__)"
+    pip install flask
+    pip install flask_cors
+
+
+
+}
+
+Then open the terminal and type these:
+expo install expo-linear-gradient
+expo install expo-image-picker
+npm install @react-navigation/native
+npm install @react-navigation/bottom-tabs
+npm install @react-navigation/native-stack
+expo install react-native-screens react-native-safe-area-context
+expo install @expo/vector-icons
+expo install expo-image-picker
+
+after that run "npx expo start"
+
+if there is an error contact me or contact chatgpt(higly recommended)
